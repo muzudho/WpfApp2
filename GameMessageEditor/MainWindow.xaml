@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Center" Height="323" Margin="5,53,5,0" VerticalAlignment="Top" Width="800">
+        <RichTextBox x:Name="richTextBox" Margin="0,53,0,0">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="RichTextBox"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="161" Click="Button_Click"/>
+        <Button x:Name="opensButton" Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Height="53" Width="161" Click="OpensButton_Click"/>
+        <Button x:Name="overwritesButton" Content="Overwrite" Height="53" VerticalAlignment="Top" Click="OverwritesButton_Click_1" HorizontalAlignment="Right" Width="148"/>
+        <Button x:Name="refreshesButton" Content="Refresh" Height="53" Margin="0,0,148,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="162" Click="refreshesButton_Click"/>
 
     </Grid>
 </Window>

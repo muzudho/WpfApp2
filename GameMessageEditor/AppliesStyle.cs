@@ -22,7 +22,7 @@
         /// </summary>
         private static Brush SolidSyuBrush = new SolidColorBrush(Color.FromRgb(239, 69, 74));
 
-        public static void Go(string contents, RichTextBox richTextBox)
+        public static FlowDocument Go(string contents)
         {
             FlowDocument flowDoc = new FlowDocument();
             Paragraph paragraph = new Paragraph();
@@ -136,7 +136,7 @@
             }
             flowDoc.Blocks.Add(paragraph);
 
-            richTextBox.Document = flowDoc;
+            return flowDoc;
         }
     }
 }

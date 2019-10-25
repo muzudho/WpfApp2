@@ -23,12 +23,15 @@
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string FileName { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            this.FileName = string.Empty;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OpensButton_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new CommonOpenFileDialog
             {
@@ -60,8 +63,9 @@
 
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                var contents = File.ReadAllText(dialog.FileName);
-                AppliesStyle.Go(contents, richTextBox);
+                this.FileName = dialog.FileName;
+                var contents = File.ReadAllText(this.FileName);
+                richTextBox.Document = AppliesStyle.Go(contents);
             }
         }
 
@@ -109,14 +113,38 @@
             // Add initial content to the RichTextBox.
             richTextBox.Document = myFlowDoc;
 
+            /*
             // 全文取得
             {
                 string plainText = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
                 Trace.WriteLine(plainText);
             }
+            */
 
             // なるべく等幅なフォント指定
             richTextBox.FontFamily = new FontFamily("ＭＳ ゴシック");
+        }
+
+        /// <summary>
+        /// 上書き保存。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OverwritesButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            string plainText = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
+            File.WriteAllText(this.FileName, plainText);
+        }
+
+        /// <summary>
+        /// 最新に更新☆（＾～＾）
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void refreshesButton_Click(object sender, RoutedEventArgs e)
+        {
+            string plainText = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text;
+            richTextBox.Document = AppliesStyle.Go(plainText);
         }
     }
 }

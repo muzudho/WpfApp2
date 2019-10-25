@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{DAC8C3C8-43FB-4A60-9D10-0DA2417CDF62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameMessageEditor", "WpfApp2\GameMessageEditor.csproj", "{B2491B14-7BB4-41D6-A703-31B1F339297A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DAC8C3C8-43FB-4A60-9D10-0DA2417CDF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAC8C3C8-43FB-4A60-9D10-0DA2417CDF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAC8C3C8-43FB-4A60-9D10-0DA2417CDF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAC8C3C8-43FB-4A60-9D10-0DA2417CDF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2491B14-7BB4-41D6-A703-31B1F339297A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2491B14-7BB4-41D6-A703-31B1F339297A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2491B14-7BB4-41D6-A703-31B1F339297A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2491B14-7BB4-41D6-A703-31B1F339297A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
