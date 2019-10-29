@@ -1,7 +1,6 @@
 ﻿namespace WpfApp2
 {
     using System.Diagnostics;
-    using System.Windows.Controls;
     using System.Windows.Documents;
     using System.Windows.Media;
 
